@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="sv" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="title">Kurs i Webbproduktion - Standout</title>
+    <meta name="description" content="@PageData["description"]">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="~/Content/img/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="~/Content/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="~/Content/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="~/Content/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="~/Content/img/apple-touch-icon-144x144-precomposed.png">
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/superfish.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/custom.css" rel="stylesheet">
+    <link href="~/Content/fontello/css/fontello.css" rel="stylesheet">
+    <link href="~/Content/css/timeline.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <a href="./" id="logo">Webbintroduktion</a>
+                </div>
+
+            </div>
+        </div>
+    </header><!-- End header -->
+
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="mobnav-btn"></div>
+                    <ul class="sf-menu">
+                        <li class="normal_drop_down">
+                            <a href="./">Hem</a>
+                        </li>
+                        <li class="normal_drop_down">
+                            <a href="/course-overview">Kurs</a>
+                            <div class="mobnav-subarrow"></div>
+                            <ul class="sf-vertical">
+                                <li><a href="/course-overview">Kursöversikt</a></li>
+                                <li><a href="/course-overview#week_one">Vecka Ett</a></li>
+                                <li><a href="/course-overview#week_two">Vecka Två</a></li>
+                                <li><a href="/course-overview#week_three">Vecka Tre</a></li>
+                                <li><a href="/course-overview#week_four">Vecka Fyra</a></li>
+                                <li><a href="/course-overview#week_five">Vecka Fem</a></li>
+                                <li><a href="/course-overview#week_six">Vecka Sex</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/about">Om</a></li>
+                    </ul>
+
+                    <div class="col-md-3 pull-right hidden-sm hidden-xs">
+                        <div id="sb-search" class="sb-search">
+                            <form>
+                                <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+                                <input class="sb-search-submit" type="submit" value="">
+                                <span class="sb-icon-search"></span>
+                            </form>
+                        </div>
+                    </div><!-- End search -->
+
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </nav>
+
+    <div id="ui-view" ui-view data-tmpl-url="@Request.RequestContext.RouteData.DataTokens["templateUrl"]">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <hr>
+        <div class="container" id="nav-footer">
+            <div class="row text-left">
+                <div class="col-md-3 col-sm-3">
+                    <h4>Hem</h4>
+                    <ul>
+                        <li><a href="./index">Hem</a></li>
+                    </ul>
+                </div><!-- End col-md-4 -->
+                <div class="col-md-3 col-sm-3">
+                    <h4>Kurs</h4>
+                    <ul>
+                        <li><a href="./course_overview">Kursöversikt</a></li>
+                    </ul>
+                </div><!-- End col-md-4 -->
+                <div class="col-md-3 col-sm-3">
+                    <h4>Om</h4>
+                    <ul>
+                        <li><a href="./about">Om</a></li>
+                    </ul>
+                </div><!-- End col-md-4 -->
+                <div class="col-md-3 col-sm-3">
+                    <ul id="follow_us">
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class=" icon-google"></i></a></li>
+                    </ul>
+                    <ul>
+                        <li><strong class="phone">073 3332303</strong><br><small>Mån - Fre / 07.00 - 17.00</small></li>
+                        <li>Frågor? <a href="#">haris@standout.se</a></li>
+                    </ul>
+                </div><!-- End col-md-4 -->
+            </div><!-- End row -->
+        </div>
+        <div id="copy_right">© devHaris - 2015</div>
+    </footer>
+
+    <div id="toTop">Back to top</div>
+
+    <!-- JQUERY -->
+    <script src="~/Content/js/jquery-1.10.2.min.js"></script>
+
+    <script src="~/Content/js/superfish.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/retina.min.js"></script>
+    <script src="~/Content/js/jquery.placeholder.js"></script>
+    <script src="~/Content/js/functions.js"></script>
+    <script src="~/Content/js/classie.js"></script>
+    <script src="~/Content/js/uisearch.js"></script>
+    <script>new UISearch(document.getElementById('sb-search'));</script>
+
+    @*
+        Google Analytics
+        ----------------
+        Google recommends that this script be placed at the top of the page. Factors to consider: if you place this
+        script at the top of the page, you'll be able to count users who don't fully load the page, and you'll incur
+        the max number of simultaneous connections of the browser.
+        https://developers.google.com/analytics/devguides/collection/analyticsjs/
+    *@
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', '@WebConfigurationManager.AppSettings["GoogleAnalytics:PropertyID"]', '@(Request.IsLocal ? "none" : "auto")');
+    </script>
+</body>
+</html>

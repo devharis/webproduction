@@ -1,0 +1,8 @@
+.notActive{
+	opacity    : 0.4;
+    filter     : alpha(opacity=60);
+    z-index    : 5;
+}
+.notActive div{
+    text-decoration: line-through;
+}
