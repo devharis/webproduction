@@ -388,6 +388,9 @@
     <Content Include="Views\week-two\day-one.cshtml" />
     <Content Include="Views\week-two\day-three.cshtml" />
     <Content Include="Views\week-two\day-two.cshtml" />
+    <Content Include="Views\week-three\day-one.cshtml" />
+    <Content Include="Views\week-three\day-three.cshtml" />
+    <Content Include="Views\week-three\day-two.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
